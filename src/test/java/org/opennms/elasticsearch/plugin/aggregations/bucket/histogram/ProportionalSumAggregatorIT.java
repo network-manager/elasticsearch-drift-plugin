@@ -86,10 +86,6 @@ public class ProportionalSumAggregatorIT extends ESIntegTestCase {
         return new DateTime(2012, month, day, 0, 0, DateTimeZone.UTC);
     }
 
-    private DateTime date(String date) {
-        return DateFieldMapper.DEFAULT_DATE_TIME_FORMATTER.parser().parseDateTime(date);
-    }
-
     private IndexRequestBuilder indexDoc(int month, int day, int value) throws Exception {
         return indexDoc(month, day, month+1, day+1, value);
     }

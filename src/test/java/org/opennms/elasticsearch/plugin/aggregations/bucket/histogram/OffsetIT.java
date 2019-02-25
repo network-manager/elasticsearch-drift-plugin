@@ -81,10 +81,6 @@ public class OffsetIT extends ESIntegTestCase {
         return new DateTime(2018, 2, 12, hourOfDay, minuteOfHour, DateTimeZone.UTC);
     }
 
-    private DateTime date(String date) {
-        return DateFieldMapper.DEFAULT_DATE_TIME_FORMATTER.parser().parseDateTime(date);
-    }
-
     private IndexRequestBuilder indexDoc(int hourOfDay, int minuteOfHour, int value) throws Exception {
         return indexDoc(hourOfDay, minuteOfHour, hourOfDay, minuteOfHour+1, value);
     }
